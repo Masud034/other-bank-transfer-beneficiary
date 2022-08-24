@@ -17,7 +17,7 @@ public class AccountTransferService {
     private final AccountTransferRepository accountTransferRepository;
 
     public AccountTransfer addBeneficiary(String userId, AccountTransfer accountTransfer) {
-        if (accountTransferRepository.existsByAccountNumber(accountTransfer.getAccountNumber()))
+        if (accountTransferRepository.existsByUserIdAndAccountNumber(userId, accountTransfer.getAccountNumber()))
             throw new DuplicateBeneficiaryException("This beneficiary is already added");
         accountTransfer.setUserId(userId);
         return accountTransferRepository.save(accountTransfer);
