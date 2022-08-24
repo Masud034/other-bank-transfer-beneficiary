@@ -6,11 +6,11 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 @RequiredArgsConstructor
-public class BeneficiaryIdMustExistValidator implements ConstraintValidator<BeneficiaryIdMustExist, String> {
+public class AccountBeneficiaryIdMustExistValidator implements ConstraintValidator<AccountBeneficiaryIdMustExist, String> {
 
     private final AccountTransferRepository accountTransferRepository;
 
-    public void initialize(BeneficiaryIdMustExist bankIdMustExist) {
+    public void initialize(AccountBeneficiaryIdMustExist bankIdMustExist) {
     }
 
     public boolean isValid(String id, ConstraintValidatorContext context) {

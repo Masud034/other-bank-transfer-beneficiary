@@ -9,10 +9,10 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.FIELD,ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = BeneficiaryIdMustExistValidator.class)
-public @interface BeneficiaryIdMustExist {
+@Constraint(validatedBy = CardBeneficiaryIdMustExistValidator.class)
+public @interface CardBeneficiaryIdMustExist {
 
-    String message() default "INVALID Bank Id ";
+    String message() default "INVALID Beneficiary Id ";
 
     Class<?>[] groups() default {};
 
